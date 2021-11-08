@@ -5,13 +5,15 @@ Modify the code by changing the algorithm to K-Nearest Neighbours.
 # Create a GaussianNB model
 from sklearn.naive_bayes import GaussianNB
 model = GaussianNB().fit(X_train, y_train)
-
 # Calculate accuracy
 model.score(X_test, y_test)
 
+0.7362204724409449
 
 # Build KNN model and compute the accuracy
 from sklearn.neighbors import KNeighborsClassifier
 clf = KNeighborsClassifier(n_neighbors=3)
 clf.fit(X_train, y_train)
 clf.score(X_test, y_test)
+
+0.6732283464566929
