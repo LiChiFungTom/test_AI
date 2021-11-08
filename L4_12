@@ -1,0 +1,18 @@
+12.	Implement the following task as a CSP with the package python-constraint.
+Assign an integer within 101 and 300 inclusively to each of ten people, named ‘A’ to ‘J’. There are four constraints as follows:
+
+
+from constraint import *
+
+n = 10
+problem = Problem()
+problem.addVariable(0, [101])
+problem.addVariables(range(1, n), range(101, 301))
+
+problem.addConstraint(lambda a, b: a*2 == b, [0, n-1])
+for i in range(1, n):
+    problem.addConstraint(lambda a, b: a+5 <= b, [i-1, i])
+
+sol = problem.getSolution()
+sol = dict(sorted(sol.items()))
+print(sol)
