@@ -1,0 +1,19 @@
+14.	Consider the following logic program in Python that encodes some instances of the relation “parent”:
+
+male = Relation()
+fact(male, 'Tom')
+fact(male, 'Bobby')
+
+female = Relation()
+fact(female, 'Mary')
+fact(female, 'Amy')       
+
+def father(x, y):
+    return lall(parent(x, y), male(x))
+
+def mother(x, y):
+    return lall(parent(x, y), female(x))
+    
+x = var()
+y = var()
+run(0, (x,y), father(x, y))   
