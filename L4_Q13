@@ -1,0 +1,16 @@
+13.	Consider the following Python code, which defines a function fib(n) that finds the nth number in the Fibonacci sequence. 
+This function uses the unification technique in logic programming. Write a Python function factl(n), 
+using the same technique, to find the factorial of an integer 
+
+
+n = var()
+
+@match(0)
+def factl(n):
+    return 1
+
+@match(n)
+def factl(n):
+    return n * factl(n-1)
+
+factl(10)
