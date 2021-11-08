@@ -1,4 +1,5 @@
-5.	Write a Python function, show_v(n, ch) that takes an integer n and a character ch as parameters and displays a ‘v’ pattern with n lines and formed by the character ch. 
+5.	Write a Python function, show_v(n, ch) that takes an integer n 
+    and a character ch as parameters and displays a ‘v’ pattern with n lines and formed by the character ch. 
     For example, show_v(5, ‘%’) will display the following pattern:
 
 def show_v(n, ch):
