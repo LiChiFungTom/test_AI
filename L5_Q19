@@ -1,0 +1,21 @@
+19.	Suppose you are asked to study the relationship the mean EA mark and the completion of the lab exercises of an AI class.
+65% of the students in the class complete all the lab exercises. Among the students who have completed all the lab exercises,
+their mean EA mark is 75 with a variance of 8. On the other hand, the mean EA mark of the students, 
+who have not completed all the lab exercises, is 63 with a variance of 15.
+Create a model in Pyro with a simple stochastic function that describes how 10 sample examination marks can be generated.
+
+
+
+import torch
+import pyro
+
+def EA_marks():
+    lab0 = pyro.sample('Lab Completion', pyro.distributions.Bernoulli(0.65))
+    lab = 'Lab completed' if lab0.item() == 1.0 else 'Lab not completed'
+    mean_mark = {'Lab completed': 75.0, 'Lab not completed': 63.0}[lab]
+    scale_mark = {'Lab completed': 8.0, 'Lab not completed': 15.0}[lab]
+    mark = pyro.sample('EA Mark', pyro.distributions.Normal(mean_mark, scale_mark))
+    return lab, mark.item()
+
+for _ in range(10):
+    print(EA_marks())
