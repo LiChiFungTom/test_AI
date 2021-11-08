@@ -19,3 +19,16 @@ def EA_marks():
 
 for _ in range(10):
     print(EA_marks())
+
+
+
+('Lab completed', 73.96704864501953)
+('Lab completed', 79.46340942382812)
+('Lab completed', 82.39796447753906)
+('Lab not completed', 72.67635345458984)
+('Lab completed', 69.89513397216797)
+('Lab not completed', 77.98527526855469)
+('Lab completed', 78.11686706542969)
+('Lab completed', 63.94119644165039)
+('Lab completed', 72.79742431640625)
+('Lab not completed', 71.43900299072266)
