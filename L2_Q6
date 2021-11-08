@@ -1,17 +1,23 @@
+6.	Write Python code with NumPy to implement to following tasks:
+
+a)	Create a 46 array named “num”, storing all randomly generated integers from 101 to 200.
 # Q6(a)
 import numpy as np
 num = np.random.randint(101, 200, size=(4,6))
 #num = np.random.randint(101, 200, size=24).reshape(4,6)
 num
 
+b)	Take alternate elements from “num” to form a 23 array called “num2”.
 # Q6(b)
 num2 = num.flatten()[::2].reshape(3,4)
 num2
 
+c)	Form an array “num3” by extracting the third and fifth columns from “num”.
 # Q6(c)
 num3 = num[:,[2,4]]
 num3
 
+d)	Extract the diagonal elements from “num” to form one-dimensional array “num4”. Note that you are NOT allowed to use the diagonal function of numpy
 # Q6(d)
 num4 = num.flatten()[::num.shape[1]+1]
 num4
