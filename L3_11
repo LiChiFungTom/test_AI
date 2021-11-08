@@ -1,0 +1,13 @@
+11.	You are given the following code segment:
+
+graph = {
+  'A' : ['B','C'],
+  'B' : ['D', 'E'],
+  'C' : ['F'],
+  'D' : [],
+  'E' : ['F'],
+  'F' : []
+}
+
+visited = []
+queue = []
