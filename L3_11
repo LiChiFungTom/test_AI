@@ -28,3 +28,5 @@ def bfs(visited, graph, node):
     if len(queue) > 0: print(' > ', end='')
     
     bfs(visited, graph, 'A')
+
+A > B > C > D > E > F
