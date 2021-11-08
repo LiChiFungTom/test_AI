@@ -1,0 +1,12 @@
+import math
+
+def nPr(n,r):
+    f = math.factorial
+    return int(f(n) / f(n-r))
+
+# Print Triangle of Permutations
+n = int(input('Enter the size of triangle: '))
+for i in range(n+1):
+    for j in range(i+1):
+        print(nPr(i,j), end=' ')
+    print()
