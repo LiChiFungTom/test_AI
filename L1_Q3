@@ -16,3 +16,7 @@ else:
     grade = 'A'
 
 print("Your grade is %s" %(grade))
+
+
+Enter score between 1 and 100: 72
+Your grade is B
