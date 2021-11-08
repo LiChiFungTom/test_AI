@@ -14,15 +14,41 @@ supermarkets = ['ParknShop', 'Gateway', 'City Super', 'Q Club', '3hree Sixty']
 sales = DataFrame(data, index=supermarkets)
 sales
 
+             Apples  Bananas  Cherries  Grapes  Oranges
+ParknShop       200      155       189     254      340
+Gateway         152      182       174     230      320
+City Super      126      169       151     184      210
+Q Club          217      152       160     242      298
+3hree Sixty     176      174       187     176      169
+
+
+
 b)	Find the sales of “Bananas” in “City Super”.
 # Q7(b)
 sales.loc['City Super']['Bananas']
+
+169
+
 
 c)	Show the supermarkets’ figures where the sales of ‘Apples’ > 150.
 # Q7(c)
 sales[sales['Apples']>150]
 
+             Apples  Bananas  Cherries  Grapes  Oranges
+ParknShop       200      155       189     254      340
+Gateway         152      182       174     230      320
+Q Club          217      152       160     242      298
+3hree Sixty     176      174       187     176      169
+
 d)	Add a column, called “Total”, to “sales”, for storing the total sales of each supermarket.
 # Q7(d)
 sales['Total'] = sales.sum(axis=1)
 sales
+
+             Apples  Bananas  Cherries  Grapes  Oranges  Total
+ParknShop       200      155       189     254      340   1138
+Gateway         152      182       174     230      320   1058
+City Super      126      169       151     184      210    840
+Q Club          217      152       160     242      298   1069
+3hree Sixty     176      174       187     176      169    882
+
