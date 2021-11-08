@@ -1,0 +1,17 @@
+# Q6(a)
+import numpy as np
+num = np.random.randint(101, 200, size=(4,6))
+#num = np.random.randint(101, 200, size=24).reshape(4,6)
+num
+
+# Q6(b)
+num2 = num.flatten()[::2].reshape(3,4)
+num2
+
+# Q6(c)
+num3 = num[:,[2,4]]
+num3
+
+# Q6(d)
+num4 = num.flatten()[::num.shape[1]+1]
+num4
