@@ -17,3 +17,5 @@ def mother(x, y):
 x = var()
 y = var()
 run(0, (x,y), father(x, y))   
+
+(('Tom', 'Amy'), ('Tom', 'Bobby'))
