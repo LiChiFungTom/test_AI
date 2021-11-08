@@ -1,0 +1,28 @@
+7.	Create a DataFrame of fruit sales in some local supermarkets as follows:
+
+a)	Store the DataFrame in variable “sales”.
+# Q7(a)
+import pandas as pd
+from pandas import DataFrame
+
+data = {'Apples': [200, 152, 126, 217, 176],
+        'Bananas': [155, 182, 169, 152, 174],
+        'Cherries': [189, 174, 151, 160, 187],
+        'Grapes': [254, 230, 184, 242, 176],
+        'Oranges': [340, 320, 210, 298, 169]}
+supermarkets = ['ParknShop', 'Gateway', 'City Super', 'Q Club', '3hree Sixty']
+sales = DataFrame(data, index=supermarkets)
+sales
+
+b)	Find the sales of “Bananas” in “City Super”.
+# Q7(b)
+sales.loc['City Super']['Bananas']
+
+c)	Show the supermarkets’ figures where the sales of ‘Apples’ > 150.
+# Q7(c)
+sales[sales['Apples']>150]
+
+d)	Add a column, called “Total”, to “sales”, for storing the total sales of each supermarket.
+# Q7(d)
+sales['Total'] = sales.sum(axis=1)
+sales
