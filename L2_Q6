@@ -7,17 +7,38 @@ num = np.random.randint(101, 200, size=(4,6))
 #num = np.random.randint(101, 200, size=24).reshape(4,6)
 num
 
+array([[110, 190, 134, 104, 199, 108],
+       [101, 111, 123, 180, 135, 171],
+       [193, 108, 180, 152, 139, 120],
+       [172, 137, 122, 109, 150, 134]])
+
+
+
 b)	Take alternate elements from “num” to form a 23 array called “num2”.
 # Q6(b)
 num2 = num.flatten()[::2].reshape(3,4)
 num2
+
+array([[110, 134, 199, 101],
+       [123, 135, 193, 180],
+       [139, 172, 122, 150]])
+
 
 c)	Form an array “num3” by extracting the third and fifth columns from “num”.
 # Q6(c)
 num3 = num[:,[2,4]]
 num3
 
+array([[134, 199],
+       [123, 135],
+       [180, 139],
+       [122, 150]])
+
+
+
 d)	Extract the diagonal elements from “num” to form one-dimensional array “num4”. Note that you are NOT allowed to use the diagonal function of numpy
 # Q6(d)
 num4 = num.flatten()[::num.shape[1]+1]
 num4
+
+array([110, 111, 180, 109])
