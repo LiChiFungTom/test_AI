@@ -1,3 +1,5 @@
+3.	Write a program to read a score between 1 and 100 for a quiz from the user, assigns a letter grade (according to the following table) using if statement, and print the grade.
+
 score = int(input("Enter score between 1 and 100: "))
 if score < 40:
     grade = 'F'
