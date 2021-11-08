@@ -1,0 +1,4 @@
+def show_v(n, ch):
+    for k in range(n):
+        print(' '*k + ch + ' '*(2*(n-k)-3) + ch*(k<n-1))
+show_v(5, '%')        
